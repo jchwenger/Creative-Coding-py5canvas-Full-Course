@@ -1,1 +1,0 @@
-#confetti project examples
