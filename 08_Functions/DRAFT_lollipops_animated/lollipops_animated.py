@@ -40,8 +40,7 @@ def draw():
         # frameCount contains the number of frames displayed since the program started.
         # It can be used with an oscillating function like sine or cosine, which returns a
         # number between -1 and 1. Try multiplying frameCount by a number.
-        # TODO: frameCount - not implemented in py5canvas yet, using millis()/16.67 as approximation
-        oscillate = ease_in(abs(sin(radians(millis()/16.67) + phase)))
+        oscillate = ease_in(abs(sin(radians(frame_count) + phase)))
         pos_y = height/2 + 50 - 100*oscillate  # y position
 
         lollipop(pos_x, pos_y, size, fill_col, oscillate)
