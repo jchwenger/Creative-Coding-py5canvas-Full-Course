@@ -10,7 +10,6 @@ def setup():
     background(45, 197, 244)  # set background color
     stroke_weight(2)  # line thickness
 
-def draw():
     stroke(0)
     fill(240, 99, 164)
     ellipse(320, 180 - 70 + 35, 300, 150)

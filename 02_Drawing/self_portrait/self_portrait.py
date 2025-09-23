@@ -12,7 +12,6 @@ def setup():
     background(255)  # set background color
     rect_mode(CENTER)
 
-def draw():
     # body
     rect(320, 180 + 125, 160, 150)
     triangle(320 - 80, 180 + 50, 320, 360, 320 + 80, 180+50)

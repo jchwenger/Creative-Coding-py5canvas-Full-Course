@@ -9,7 +9,6 @@ def setup():
     size(640, 360)  # canvas size
     background(255)  # set background color
 
-def draw():
     # antennas
     rect_mode(CENTER)
     rect(320 - 30, 180 - 80, 15, 75)

@@ -10,7 +10,6 @@ def setup():
     background(255)  # set background color
     stroke_weight(2)  # line thickness
 
-def draw():
     no_fill()
     ellipse(320, 180 - 70 + 35, 300, 150)
     circle(320, 180 + 5, 20)

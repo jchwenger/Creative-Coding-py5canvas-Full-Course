@@ -6,7 +6,6 @@ def setup():
     size(640, 360)
     background(255, 0, 150)
 
-def draw():
     no_stroke()
     fill(99, 50, 200)
     circle(500, 180, 150)

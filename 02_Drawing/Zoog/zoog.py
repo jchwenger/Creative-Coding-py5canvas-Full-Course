@@ -8,8 +8,6 @@ def setup():
     color_mode("rgb", 255, 255, 255, 100)
     background(100, 0, 150)
 
-def draw():
-
     # Legs
     stroke(255, 255, 0)
     stroke_weight(8)

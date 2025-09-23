@@ -7,9 +7,7 @@ from py5canvas import *
 
 def setup():
     size(640, 360)
-
-def draw():
-
+    
     background(200)
 
     circle(500, 180, 100)

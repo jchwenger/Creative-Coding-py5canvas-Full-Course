@@ -9,7 +9,6 @@ def setup():
     size(640, 360)  # canvas size
     background(0)  # set background color
 
-def draw():
     stroke(0)  # black outline
     rect(320-5, 180, 10, 320)
 

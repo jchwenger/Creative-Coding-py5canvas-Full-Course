@@ -9,7 +9,6 @@ def setup():
     size(640, 360)  # canvas size
     background(255)  # set background color
 
-def draw():
     stroke(0, 128, 0)  # stem color
     stroke_weight(10)  # thickness of line
     line(320, 180, 320, 360)  # stem

@@ -11,7 +11,6 @@ def setup():
     no_fill()  # don't fill the shapes
     stroke_weight(50)  # line thickness
 
-def draw():
     line(0, 120, 500, 400)
     circle(300, 150, 200)
     rect_mode(CENTER)
