@@ -1,0 +1,28 @@
+# Spaceship
+# The Coding Train / Daniel Shiffman
+# Processing Intro Series
+# Translated to py5canvas
+
+from py5canvas import *
+
+def setup():
+    size(640, 360)  # canvas size
+    background(255)  # set background color
+    stroke_weight(2)  # line thickness
+
+def draw():
+    no_fill()
+    ellipse(320, 180 - 70 + 35, 300, 150)
+    circle(320, 180 + 5, 20)
+    circle(320 + 75, 180 - 10, 20)
+    circle(320 - 75, 180 - 10, 20)
+    circle(320 - 120, 180 - 50, 20)
+    circle(320 + 120, 180 - 50, 20)
+
+    fill(240)
+    ellipse(320, 180 - 70, 200, 100)
+
+    line(320 - 100, 180 + 30, 320 - 200, 180 + 200)
+    line(320 + 100, 180 + 30, 320 + 200, 180 + 200)
+
+run()
