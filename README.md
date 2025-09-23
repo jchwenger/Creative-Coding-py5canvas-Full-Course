@@ -1,3 +1,12 @@
+# This repo is a translation into py5canvas (Python) of Dan Shiffman's Processing course!
+
+[py5canvas](https://github.com/colormotor/py5canvas/tree/main).
+
+[Coding Train repository](https://github.com/CodingTrain/Creative-Coding-Processing-Full-Course).
+
+---
+
+
 # 🚂 Beginner's Guide to Creative Coding w/ Processing 🌈
 
 [![Video thumbnail with colorful text and characters: "Learning Processing"](img/video-thumb.jpg)](https://nebula.tv/videos/codingtrain-beginners-guide-to-creative-coding-with-processing-full-course)
