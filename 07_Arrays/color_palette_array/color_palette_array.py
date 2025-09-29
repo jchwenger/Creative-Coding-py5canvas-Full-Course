@@ -34,19 +34,15 @@ def draw():
         text_size(18)
         text_align(LEFT, CENTER)
 
-        # convert the red value of each color to an integer
-        # TODO: red(), green(), blue() functions - not implemented in py5canvas yet
-        # r = int(red(color_array[i]))
-        # g = int(green(color_array[i]))
-        # b = int(blue(color_array[i]))
-
+        # convert the value of each color to an integer
         r = int(color_array[i][0])
         g = int(color_array[i][1])
         b = int(color_array[i][2])
 
-        text("r: " + str(r), size_val+size_val*i - 20, 60 + height/2 - 18)
-        text("g: " + str(g), size_val+size_val*i - 20, 60 + height/2)
-        text("b: " + str(b), size_val+size_val*i - 20, 60 + height/2 + 20)
+        # use f-strings to construct our messages
+        text(f"r: {r}", size_val+size_val*i - 20, 60 + height/2 - 18)
+        text(f"g: {g}", size_val+size_val*i - 20, 60 + height/2)
+        text(f"b: {b}", size_val+size_val*i - 20, 60 + height/2 + 20)
 
     fill(0)
     text_size(14)
