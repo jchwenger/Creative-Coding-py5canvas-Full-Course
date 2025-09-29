@@ -5,11 +5,23 @@
 
 from py5canvas import *
 
+# different from Processing: a boolean used to control `draw` from
+# `mouse_pressed`
+blackout = False
+
 def setup():
     size(640, 460)
     frame_rate(5)  # sketch will refresh 5 times per second
 
 def draw():
+    global blackout
+
+    # react to the mouse click using a boolean
+    if blackout:
+        background(0)
+        blackout = False
+        return
+
     # Sky
     background(50, 50, 250)
     rect_mode(CORNER)
@@ -58,6 +70,10 @@ def draw():
     circle(x - h / 24, y + h / 4, h / 12)
 
 def mouse_pressed():
-    background(0)
+    global blackout
+    print("Mouse pressed")
+    # TODO: why this is not working still under investigation
+    # background(0)
+    blackout = True
 
 run()
