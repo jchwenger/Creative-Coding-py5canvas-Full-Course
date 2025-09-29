@@ -32,12 +32,11 @@ def mouse_pressed():
 
 def draw():
     background(0, 0, 50)
-    # TODO: strokeCap(SQUARE) - not implemented in py5canvas yet
+    stroke_cap(SQUARE)
     text_align(CENTER)
     text_size(24)
 
     for i in range(len(fruit_inventory)):
-        fill(color_array[i])
         rect_mode(CORNER)
         stroke_weight(2)
         stroke(color_array[i])
@@ -52,7 +51,8 @@ def draw():
         stroke_weight(24)
         line(x, height/2, x, height/2 - fruit_inventory[i])
 
-        stroke_weight(2)
+        fill(color_array[i])
+        no_stroke()
         text(fruit_names[i], x, height/2 + 24)  # fruit name labels
 
         # We declared the fruit inventory array as having floats
@@ -64,7 +64,7 @@ def draw():
 
     fill(240)
     text_size(14)
-    stroke(255)
+    no_stroke()
     stroke_weight(1)
 
     text_align(LEFT, CENTER)
