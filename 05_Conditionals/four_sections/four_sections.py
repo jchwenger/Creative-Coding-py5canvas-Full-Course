@@ -21,9 +21,7 @@ def draw():
     elif mouse_y < 180:
         square(300, 135, 70)
     elif mouse_y < 270:
-        rect(300, 225, 150, 35)
-        # TODO: no radius argument implemented
-        # rect(300, 225, 150, 35, 5)
+        rect(300, 225, 150, 35, 5)
     else:
         circle(300, 315, 70)
 
