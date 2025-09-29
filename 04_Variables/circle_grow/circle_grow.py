@@ -34,10 +34,6 @@ def draw():
     rect_mode(CENTER)
     fill(240)
 
-    rect(width/2, height, 15, height/2)
-
-    # TODO: Implement 5th parameter in rect rounds the corners.
-    # Check out the reference page for more detail!
-    # rect(width/2, height, 15, height/2, 5)
+    rect(width/2, height, 15, height/2, 5)
 
 run()
