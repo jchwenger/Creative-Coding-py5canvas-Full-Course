@@ -24,12 +24,13 @@ def draw():
     background(0)
     stroke(255)
     stroke_weight(24)
-    # TODO: strokeCap(SQUARE) - not implemented in py5canvas yet
+    stroke_cap(SQUARE)
 
     # line height is number of fruits in inventory
     line(width/2, height/2, width/2, height/2 - fruit_inventory[index])
 
     text_align(CENTER)
+    no_stroke()
     text_size(64)
     fill(255)
     text(fruit_names[index], width/2, height/2 + 64)
