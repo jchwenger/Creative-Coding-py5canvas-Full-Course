@@ -9,9 +9,8 @@ from py5canvas import *
 # hexidecimal notation (ex: #FFFFFF is the color white). Many
 # color palettes found online use hex codes to denote colors.
 # You can convert "rgb" to Hex or vice versa using online tools.
-# TODO: Hex color support - not implemented in py5canvas yet
-# rainbow_colors = [#9A56FF, #527AF2, #F2B807, #F28907, #F2220F]
-rainbow_colors = [color(154, 86, 255), color(82, 122, 242), color(242, 184, 7), color(242, 137, 7), color(242, 34, 15)]
+# Hex color support, yay!, implemented in py5canvas!
+rainbow_colors = ["#9A56FF", "#527AF2", "#F2B807", "#F28907", "#F2220F"]
 
 def setup():
     size(640, 360)
