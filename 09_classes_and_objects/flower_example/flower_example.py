@@ -1,17 +1,18 @@
 from py5canvas import *
+import random as rnd
 
 # Flower class
 # The Coding Train / Daniel Shiffman
 # Processing Intro Series
 # Translated to py5canvas
 
-# TODO: fix imports
 # Change from original: accepts an optional palette
 class Flower:
     def __init__(self, x, y, palette=None):
         self.x = x
         self.y = y
-        self.size = 0
+        # unlike in the original, for now we can't have a size-zero flower
+        self.size = 1
         self.max_size = 50
         # pick a random color from provided palette or a default
         if palette is None:
@@ -22,9 +23,8 @@ class Flower:
                 color(242, 137, 7),
                 color(242, 34, 15),
             ]
-        # TODO: implement random(1D-array)? https://p5js.org/reference/p5/random/
-        # or handle conflict with `import random` in Python?
-        self.fill_col = random(palette)
+        # using random.choice to select one from the list
+        self.fill_col = rnd.choice(palette)
         self.wink_counter = 0
 
     def show_flower(self):
@@ -51,8 +51,7 @@ class Flower:
         # flower center
         no_stroke()
         # decrease the brightness of the main color for the center of the flower
-        # TODO: implement hue / saturation / brightness
-        fill(hue(self.fill_col), saturation(self.fill_col), brightness(self.fill_col) - 100)
+        fill(self.fill_col[0], self.fill_col[1], self.fill_col[2] - 100)
         circle(self.x, self.y, self.size)
 
     def _show_face(self):
