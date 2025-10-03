@@ -9,9 +9,8 @@ from py5canvas import *
 # hexidecimal notation (ex: #FFFFFF is the color white). Many
 # color palettes found online use hex codes to denote colors.
 # You can convert "rgb" to Hex or vice versa using online tools.
-# TODO: Hex color support - not implemented in py5canvas yet
-# rainbow_colors = [#9A56FF, #527AF2, #F2B807, #F28907, #F2220F]
-rainbow_colors = [color(154, 86, 255), color(82, 122, 242), color(242, 184, 7), color(242, 137, 7), color(242, 34, 15)]
+# Hex color support, yay!, implemented in py5canvas!
+rainbow_colors = ["#9A56FF", "#527AF2", "#F2B807", "#F28907", "#F2220F"]
 
 def setup():
     size(640, 360)
@@ -19,7 +18,6 @@ def setup():
     # Use hue, saturation and brightness to specify
     # color with a minimum value of 0 and maximum value of
     # 255.
-    color_mode("hsb", 255)
 
 def draw():
     background(150, 30, 255)
@@ -48,19 +46,22 @@ def lollipop(x, y, size, fill_col):
 
     rect(x - rect_size/2, y - rect_size/8, rect_size, rect_size/4)
 
-    # TODO: radius in rect not implemented yet
-    # rect(x - rect_size/2, y - rect_size/8, rect_size, rect_size/4, 5)
+    rect(x - rect_size/2, y - rect_size/8, rect_size, rect_size/4, 5)
 
     # TODO: hue(), saturation(), brightness() functions - not implemented in py5canvas yet
     # stroke(hue(fill_col), saturation(fill_col) - 100, brightness(fill_col))  # highlight
-    # line(x - rect_size/2 + rect_size/8, y - rect_size/8, x + rect_size/2 - rect_size/8, y - rect_size/8)
+    stroke(fill_col[0], fill_col[0] - 100, fill_col[0])  # highlight
+    line(x - rect_size/2 + rect_size/8, y - rect_size/8, x + rect_size/2 - rect_size/8, y - rect_size/8)
+    # TODO: hue(), saturation(), brightness() functions - not implemented in py5canvas yet
     # stroke(hue(fill_col), saturation(fill_col), brightness(fill_col) - 100)  # shadow
-    # line(x - rect_size/2 + rect_size/8, y + rect_size/8, x + rect_size/2 - rect_size/8, y + rect_size/8)
+    stroke(fill_col[0], fill_col[0], fill_col[0] - 100)  # shadow
+    line(x - rect_size/2 + rect_size/8, y + rect_size/8, x + rect_size/2 - rect_size/8, y + rect_size/8)
 
     # white arc for glossy effect
     no_fill()
     stroke_weight(5)
-    stroke(255)
+    # TODO: fill(255) should be white even in HSB
+    stroke(255, 0, 255)
     arc(x, y, size - 20, size - 20, PI, PI + PI/3)
 
 def sunshine():
@@ -70,7 +71,8 @@ def sunshine():
 
 def cloud(pos_x, pos_y, size):
     for i in range(3):
-        fill(255)
+        # TODO: fill(255) should be white even in HSB
+        fill(255, 0, 255)
         no_stroke()
         circle(pos_x + size/2*i, pos_y, size)
 
