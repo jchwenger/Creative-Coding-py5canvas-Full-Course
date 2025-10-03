@@ -30,11 +30,10 @@ def draw():
     c_line = height - height/4  # bottom line (celsius)
 
     stroke_weight(80)
-    # blendMode() blends the pixels in the display window according to a defined mode.
-    # blendMode(BLEND) is the default.
+    # blend_mode() blends the pixels in the display window according to a defined mode.
+    blend_mode("over")
 
     # Gray background lines
-    # TODO: blendMode(BLEND) - not implemented in py5canvas yet
     stroke(230)
     line(x1, f_line, x2, f_line)
     line(x1, c_line, x2, c_line)
@@ -56,12 +55,14 @@ def draw():
     line(x1, f_line, x1 + fahrenheit, f_line)
     line(x1, c_line, x1 + celsius, c_line)
 
-    text_size(14)
+    no_stroke()
     fill(255)
-    # blendMode(DIFFERENCE) subtracts colors from the underlying image/shape so
+    text_size(14)
+
+    # blend_mode("difference") subtracts colors from the underlying image/shape so
     # when the black line is over the text, the text is white. Otherwise,
     # the text is black (legibility).
-    # TODO: blendMode(DIFFERENCE) - not implemented in py5canvas yet
+    blend_mode("difference")
     text_align(CENTER, CENTER)
 
     # Use the round() function to round to the nearest degree.
