@@ -5,7 +5,8 @@
 
 from py5canvas import *
 
-rainbow_colors = [color(154, 86, 255), color(82, 122, 242), color(242, 184, 7), color(242, 137, 7), color(242, 34, 15)]
+rainbow_colors = ["#9A56FF", "#527AF2", "#F2B807", "#F28907", "#F2220F"]
+# rainbow_colors = [color(154, 86, 255), color(82, 122, 242), color(242, 184, 7), color(242, 137, 7), color(242, 34, 15)]
 horn_color = int(random(len(rainbow_colors)))
 print(horn_color)
 
@@ -20,7 +21,7 @@ def draw():
     cupcake()
     puppy()
     unicorn()
-    # TODO: noLoop() - not implemented in py5canvas yet
+    no_loop()
 
 def cupcake():
     sw = 3  # strokeWeight
@@ -36,19 +37,13 @@ def cupcake():
     # frosting
     fill(0, 80, 255)
 
-    rect(pos_x, pos_y - 50, 120, 50)
-    # TODO: radius not yet implemented
-    # rect(pos_x, pos_y - 50, 120, 50, 50)
+    rect(pos_x, pos_y - 50, 120, 50, 50)
 
-    rect(pos_x, pos_y, 150, 50)
-    # TODO: radius not yet implemented
-    # rect(pos_x, pos_y, 150, 50, 50)
+    rect(pos_x, pos_y, 150, 50, 50)
 
     # cup
     fill(40, 100, 255)
-    rect(pos_x, pos_y + 100, 200, 150)
-    # TODO: radius not yet implemented
-    # rect(pos_x, pos_y + 100, 200, 150, 10)
+    rect(pos_x, pos_y + 100, 200, 150, 10)
 
     for i in range(5):
         line(pos_x - 70 + 35 * i, pos_y + 50, pos_x - 70 + 35 * i, pos_y + 150)
@@ -70,7 +65,7 @@ def unicorn():
     stroke_weight(sw)
     tri_size = 50  # size of triangle
     # pick a random horn color
-    fill(*rainbow_colors[horn_color])
+    fill(rainbow_colors[horn_color])
     triangle(pos_x - tri_size/2, pos_y - 100, pos_x + tri_size, pos_y - 90, pos_x + tri_size/2, pos_y - 100 - tri_size*2)
 
     # unicorn "mane"
@@ -81,9 +76,7 @@ def unicorn():
     # head
     fill(255)
 
-    rect(pos_x, pos_y, 150, 215)
-    # TODO: radius not yet implemented
-    # rect(pos_x, pos_y, 150, 215, 100)
+    rect(pos_x, pos_y, 150, 215, 100)
 
     # nose
     fill(0, 120, 255)
@@ -116,9 +109,7 @@ def puppy():
     # head
     stroke(0)
     fill(15, 75, 200)
-    rect(pos_x, pos_y, 150, 215)
-    # TODO: radius not yet implemented
-    # rect(pos_x, pos_y, 150, 215, 100)
+    rect(pos_x, pos_y, 150, 215, 100)
 
     # nose
     fill(35, 75, 255)
