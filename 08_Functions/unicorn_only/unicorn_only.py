@@ -5,9 +5,8 @@
 
 from py5canvas import *
 
-# TODO: Hex color support - not implemented in py5canvas yet
-# rainbow_colors = [#9A56FF, #527AF2, #F2B807, #F28907, #F2220F]
-rainbow_colors = [color(154, 86, 255), color(82, 122, 242), color(242, 184, 7), color(242, 137, 7), color(242, 34, 15)]
+# Hex color support - yay, implemented in py5canvas!
+rainbow_colors = ["#9A56FF", "#527AF2", "#F2B807", "#F28907", "#F2220F"]
 
 def setup():
     size(640, 360)
@@ -47,9 +46,7 @@ def unicorn():
 
     # head
     fill(255)
-    rect(pos_x, pos_y, 150, 215)
-    # TODO: radius not yet implemented
-    # rect(pos_x, pos_y, 150, 215, 100)
+    rect(pos_x, pos_y, 150, 215, 100)
 
     # nose
     fill(0, 120, 255)
@@ -82,9 +79,7 @@ def puppy():
     # head
     stroke(0)
     fill(15, 75, 200)
-    rect(pos_x, pos_y, 150, 215)
-    # TODO: radius not yet implemented
-    # rect(pos_x, pos_y, 150, 215, 100)
+    rect(pos_x, pos_y, 150, 215, 100)
 
     # nose
     fill(35, 75, 255)
