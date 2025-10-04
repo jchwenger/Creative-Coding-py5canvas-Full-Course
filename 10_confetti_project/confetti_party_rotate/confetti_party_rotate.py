@@ -10,9 +10,8 @@ from py5canvas import *
 # hexidecimal notation (ex: #FFFFFF is the color white). Many
 # color palettes found online use hex codes to denote colors.
 # You can convert RGB to Hex or vice versa using online tools.
-# TODO: Hex color support - not implemented in py5canvas yet
-# rainbow_colors = [#9A56FF, #527AF2, #F2B807, #F28907, #F2220F]
-rainbow_colors = [color(154, 86, 255), color(82, 122, 242), color(242, 184, 7), color(242, 137, 7), color(242, 34, 15)]
+# Hex color support, yay!, implemented in py5canvas!
+rainbow_colors = ["#9A56FF", "#527AF2", "#F2B807", "#F28907", "#F2220F"]
 
 
 class Confetti:
@@ -25,8 +24,6 @@ class Confetti:
         self.yspeed = 0
         self.angle = 0
         self.angle_speed = random(-0.1, 0.1)
-        # TODO: implement random(1D-array)? https://p5js.org/reference/p5/random/
-        # or handle conflict with `import random` in Python?
         self.color = rnd.choice(rainbow_colors)
 
     def burst(self, mx, my):
@@ -54,6 +51,8 @@ class Confetti:
 
 
 # Global variables
+# (unlike in Java, the most-used container, List, already
+# behaves like an ArrayList (resizeable)
 confetti = []
 party_time = False
 

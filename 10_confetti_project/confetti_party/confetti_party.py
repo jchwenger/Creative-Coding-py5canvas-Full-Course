@@ -5,7 +5,6 @@
 
 from py5canvas import *
 
-# TODO: fix imports
 class Confetti:
     def __init__(self):
         self.x = -1000
@@ -30,6 +29,8 @@ class Confetti:
         square(self.x, self.y, 10)
 
 # Global variables
+# (unlike in Java, the most-used container, List, already
+# behaves like an ArrayList (resizeable)
 confetti = []
 party_time = False
 
