@@ -15,9 +15,11 @@ rainbow_colors = ["#9A56FF", "#527AF2", "#F2B807", "#F28907", "#F2220F"]
 def setup():
     size(640, 360)
 
+    # TODO: Not currently working, see TODO.md
     # Use hue, saturation and brightness to specify
     # color with a minimum value of 0 and maximum value of
     # 255.
+    # color_mode("hsb", 255)
 
 def draw():
     background(150, 30, 255)
@@ -48,7 +50,7 @@ def lollipop(x, y, size, fill_col):
 
     rect(x - rect_size/2, y - rect_size/8, rect_size, rect_size/4, 5)
 
-    stroke(fill_col[0], fill_col[0] - 100, fill_col[0])  # highlight
+    stroke(fill_col[1], fill_col[0] - 100, fill_col[0])  # highlight
     line(x - rect_size/2 + rect_size/8, y - rect_size/8, x + rect_size/2 - rect_size/8, y - rect_size/8)
     stroke(fill_col[0], fill_col[0], fill_col[0] - 100)  # shadow
     line(x - rect_size/2 + rect_size/8, y + rect_size/8, x + rect_size/2 - rect_size/8, y + rect_size/8)
