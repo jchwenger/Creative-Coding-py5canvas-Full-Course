@@ -7,7 +7,7 @@ from py5canvas import *
 
 def setup():
     size(640, 360)  # canvas size
-    color_mode("rgb", width, height, 255)
+    # color_mode("rgb", width, height, 255)
 
 def draw():
     background(240, 99, 164)  # set background color
