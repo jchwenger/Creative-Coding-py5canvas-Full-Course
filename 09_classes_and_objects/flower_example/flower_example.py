@@ -83,7 +83,6 @@ f = None
 def setup():
     global f
     size(640, 360)
-    # pixel_density(2)  # TODO: implement
 
     # Use HSB with 0..255 ranges as in PDE
     color_mode(HSB, 255)

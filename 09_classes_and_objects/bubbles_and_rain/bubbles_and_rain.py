@@ -6,7 +6,6 @@ from py5canvas import *
 # Translated to py5canvas
 
 
-# TODO: fix imports
 class Bubble:
     def __init__(self, x, y, r):
         self.x = x

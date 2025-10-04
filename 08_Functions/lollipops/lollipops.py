@@ -48,19 +48,14 @@ def lollipop(x, y, size, fill_col):
 
     rect(x - rect_size/2, y - rect_size/8, rect_size, rect_size/4, 5)
 
-    # TODO: hue(), saturation(), brightness() functions - not implemented in py5canvas yet
-    # stroke(hue(fill_col), saturation(fill_col) - 100, brightness(fill_col))  # highlight
     stroke(fill_col[0], fill_col[0] - 100, fill_col[0])  # highlight
     line(x - rect_size/2 + rect_size/8, y - rect_size/8, x + rect_size/2 - rect_size/8, y - rect_size/8)
-    # TODO: hue(), saturation(), brightness() functions - not implemented in py5canvas yet
-    # stroke(hue(fill_col), saturation(fill_col), brightness(fill_col) - 100)  # shadow
     stroke(fill_col[0], fill_col[0], fill_col[0] - 100)  # shadow
     line(x - rect_size/2 + rect_size/8, y + rect_size/8, x + rect_size/2 - rect_size/8, y + rect_size/8)
 
     # white arc for glossy effect
     no_fill()
     stroke_weight(5)
-    # TODO: fill(255) should be white even in HSB
     stroke(255, 0, 255)
     arc(x, y, size - 20, size - 20, PI, PI + PI/3)
 
@@ -71,7 +66,6 @@ def sunshine():
 
 def cloud(pos_x, pos_y, size):
     for i in range(3):
-        # TODO: fill(255) should be white even in HSB
         fill(255, 0, 255)
         no_stroke()
         circle(pos_x + size/2*i, pos_y, size)
